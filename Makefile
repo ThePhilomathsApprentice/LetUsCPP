@@ -1,8 +1,8 @@
-virtualInheritance: virtualInheritance.exe
-	./virtualInheritance.exe
+diamondProblem: diamondProblem.exe
+	./diamondProblem.exe
 	
-virtualInheritance.exe: virtualInheritance.cpp 
-	g++ virtualInheritance.cpp -o virtualInheritance.exe
+diamondProblem.exe: DiamondProblem.cpp 
+	g++ DiamondProblem.cpp -o diamondProblem.exe
 	
 clean:
 	del /S *.o
