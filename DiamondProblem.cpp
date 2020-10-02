@@ -1,5 +1,5 @@
 
-#define useVirtualInheritance 0
+#define useVirtualInheritance 1
 
 #if useVirtualInheritance
 
