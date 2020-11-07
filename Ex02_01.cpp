@@ -1,4 +1,4 @@
-//Ex01_01.cpp: Yash Joshi.
+// This program has been copied for understanding from: https://developers.google.com/edu/c++/getting-started
 
 // get_input.cpp: Maggie Johnson
 // Description: Illustrate the use of cin to get input.
