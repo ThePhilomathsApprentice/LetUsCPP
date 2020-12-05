@@ -42,21 +42,6 @@ class Positions {
 
 	}
 	
-    bool operator ==( const Positions& a){
-	
-	if (this == &a) return true;
-
-	if(	(this->_x == a._x ) &&  (this->_y == a._y ) ){
-	    return true;
-	    }else{
-		return false;
-		
-		}	
-	return false;
-
-	}
-    
-    
     };
 
 int diffPositions ( Positions a, Positions b ) {
@@ -91,7 +76,7 @@ Positions ClosestCoin ( Positions myPos, std::vector<Positions> coinPos)
 }
     
 int main(){
-    Positions myPos(200,210);
+    Positions myPos(20,21);
     Positions oneCoin(1,0);
     Positions twoCoin(3,4);
     Positions threeCoin(6,7);
