@@ -7,6 +7,8 @@
 
 #include <iostream>
 
+#include <ios>
+#include <limits>
 
 int main() {
   int input_var = 0;
@@ -25,7 +27,7 @@ int main() {
       std::cout << "You entered a non-numeric. Please Retry..." << std::endl;
       
       std::cin.clear();
-      std::cin.ignore(1000,'\n');
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     }else if (input_var != -1) {
       std::cout << "You entered " << input_var << std::endl;
