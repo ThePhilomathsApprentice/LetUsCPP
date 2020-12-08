@@ -55,15 +55,18 @@ int diffPositions ( Positions a, Positions b ) {
 Positions ClosestCoin ( Positions myPos, std::vector<Positions> coinPos)
 {
     Positions closestCoin;
+    int diffClosestPosition=-1;
     
     for( unsigned int i=0 ;  i < coinPos.size() ;  i++  ){
 	
 	if( i == 0 ){
 	    closestCoin = coinPos[i] ;
+	    diffClosestPosition = diffPositions(myPos, closestCoin);
 
 	    }
-	    else if( diffPositions(myPos, coinPos[i] ) < diffPositions(myPos, closestCoin) ){
+	    else if( diffPositions(myPos, coinPos[i] ) < diffClosestPosition ){
 		    closestCoin = coinPos[i] ;
+		    diffClosestPosition = diffPositions(myPos, closestCoin);
 
 		    }else{
 			//DO Nothing;
@@ -76,7 +79,7 @@ Positions ClosestCoin ( Positions myPos, std::vector<Positions> coinPos)
 }
     
 int main(){
-    Positions myPos(20,21);
+    Positions myPos(14,16);
     Positions oneCoin(1,0);
     Positions twoCoin(3,4);
     Positions threeCoin(6,7);
@@ -87,15 +90,13 @@ int main(){
     coinsPos.push_back(oneCoin);
     coinsPos.push_back(twoCoin);
     coinsPos.push_back(threeCoin);
-    coinsPos.push_back(fourCoin);
     coinsPos.push_back(fiveCoin);
+    coinsPos.push_back(fourCoin);
     
     Positions closestCoin = ClosestCoin(myPos, coinsPos );
     
     std::cout << "Closest Coin is : (" << closestCoin._x << "," <<  closestCoin._y << ")" <<"\n";
     std::cout << "And Distance is: " << diffPositions(myPos,closestCoin) << "\n";
-    
-    
     
     return 0;
     
