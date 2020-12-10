@@ -9,7 +9,6 @@ class Q{
     std::stack<int> S1;
 
     std::stack<int> S2;
-    
 
 void enQueue( int x ){
 	    	std::cout << "pushed " << x << "\n"; 
