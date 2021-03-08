@@ -80,12 +80,9 @@ class A{
     }
 	
     void print(){
-	    cout<<"_a:"<<_a<<endl;
-	    cout<<"_b:"<<_b<<endl;
+	    cout<<"_a:"<<_a<<"\t_b:"<<_b<<endl;
 
-	    cout<<"_aptr:"<<_aptr<<endl;
-	    cout<<"(*_aptr):"<<(*_aptr)<<endl;
-	    cout<<"&_aptr:"<<(&_aptr)<<endl;
+	    cout<<"&_aptr:"<<(&_aptr)<<"\t_aptr:"<<_aptr<<"\t(*_aptr):"<<(*_aptr)<<"\n";
 	    
     }
 
