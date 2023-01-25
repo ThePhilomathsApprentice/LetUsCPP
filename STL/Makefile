@@ -1,8 +1,8 @@
 STL: stl
-	./stl
+	./stl.out
 
 stl: STL_Algos.cpp
-	g++ STL_Algos.cpp -o stl
+	g++ STL_Algos.cpp -o stl.out
 
-clean: stl
-	rm stl
+fresh: STL
+	rm stl.out
