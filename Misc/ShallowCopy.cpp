@@ -8,16 +8,15 @@ class A{
     int _a;
     int _b;
     int* _aptr;
-    
-    
+
     A(int a,int b):_a(a), _b(b){
-	
+
 	_aptr = new int;
 
 	}
-	
+
     ~A(){
-	
+
 	if(_aptr){
 	     delete _aptr;
 	     _aptr = nullptr;
@@ -27,17 +26,17 @@ class A{
 
     int setA(int a_val){
 	(*_aptr) = a_val;
-	
+
 	return 0;
     }
-	
+
     void print(){
 	    cout<<"_a:"<<_a<<endl;
 	    cout<<"_aptr:"<<_aptr<<endl;
 	    cout<<"(*_aptr):"<<(*_aptr)<<endl;
 	    cout<<"&_aptr:"<<(&_aptr)<<endl;
 	    cout<<"_b:"<<_b<<endl;
-	    
+
     }
 
     };
@@ -56,7 +55,7 @@ int main(){
 	cout<<"++++_START_obj_2++++"<<endl;
 	obj_2.print();
 	cout<<"++++_END_obj_2++++"<<endl;
-	
+
 
 	obj_1.setA(150);
 
@@ -74,6 +73,5 @@ int main(){
 	cout<<"Notice the value of _aptr of both objects, they are Same. Indicating they are pointing to Same memory locations."<<endl<<"The values are getting updated, but the memory locations are same, meaning if one object 'deletes' the memory location, the other object won't be able to access it again.'"<<endl;;
 
 	return 0;
-    
-    
-    }
+
+}
