@@ -3,7 +3,7 @@
 
 struct foo {
     TAILQ_ENTRY(foo) tailq;
-    int datum;
+    int data;
 };
 
 struct foo foo (int val) {
@@ -25,14 +25,14 @@ int main ()
     TAILQ_INSERT_TAIL(&q, &data[2], tailq);
 
     TAILQ_FOREACH(p, &q, tailq) {
-        printf(" %d", p->datum);
+        printf(" %d", p->data);
     }
-    puts("");
+    printf("\n");
 
     TAILQ_FOREACH_REVERSE(p, &q, fooq, tailq) {
-        printf(" %d", p->datum);
+        printf(" %d", p->data);
     }
-    puts("");
+    printf("\n");
 
     while (!TAILQ_EMPTY(&q)) {
         p = TAILQ_FIRST(&q);
