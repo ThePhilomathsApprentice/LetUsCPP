@@ -1,5 +1,8 @@
-q: tail
-	./q.out
+fresh: q
+	rm -rf bin/*
 
-tail: tailq.c
-	gcc tailq.c -o q.out
+q: tail
+	./bin/q.out
+
+tail: src/tailq.c
+	gcc src/tailq.c -o bin/q.out
