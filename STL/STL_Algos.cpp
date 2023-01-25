@@ -71,9 +71,7 @@ int main()
         std::cout << "The maximum element of heap is : ";
         std::cout << v2.front() << "\n";
 
-
     }
-
 
     /* ++++++++++ SORTING ++++++++++ */
     {
@@ -94,11 +92,10 @@ int main()
         std::cout << "Sorting v1:\n";
         std::sort(v1.begin(), v1.end()); //Modifies the vector.
         printVector(v1);
-        
+
         std::cout << "nth_element:\n";
         std::nth_element(v1.begin(), v1.begin()+5, v1.end()); //Modifies the vector.
         printVector(v1);
-
 
     }
 }
